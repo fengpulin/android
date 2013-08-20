@@ -8,9 +8,30 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/button_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="116dp"
+        android:text="@string/login" />
+
+    <EditText
+        android:id="@+id/editText_getName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textView_showLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText_getName"
+        android:layout_alignLeft="@+id/editText_getName"
+        android:layout_marginBottom="42dp"
+        android:text="@string/hello" />
 
 </RelativeLayout>
