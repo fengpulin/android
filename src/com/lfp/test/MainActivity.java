@@ -1,8 +1,8 @@
 package com.lfp.test;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -13,9 +13,11 @@ public class MainActivity extends Activity {
 	
 	private EditText editText_getName;
 	
-	private Button button_Login;
+	private Button button_login;
 	
 	private TextView textView_showLogin;
+	
+	private Button button_result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,25 +26,29 @@ public class MainActivity extends Activity {
         
         editText_getName = (EditText)findViewById(R.id.editText_getName);
         
-        button_Login = (Button)findViewById(R.id.button_login);
+        button_login = (Button)findViewById(R.id.button_login);
         
         textView_showLogin = (TextView)findViewById(R.id.textView_showLogin);
         
-        button_Login.setOnClickListener(new OnClickListener(){
+        button_result = (Button)findViewById(R.id.button_result);
+        
+        button_login.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v){
         		textView_showLogin.setText("hello"+editText_getName.getText());
         	}
         	
         });
-    }
+        
+        button_result.setOnClickListener(new OnClickListener(){
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+			@Override
+			public void onClick(View v) {
+				Intent showResult_intent = new Intent(MainActivity.this,ResultActivity.class);
+				startActivity(showResult_intent);
+				
+			}
+        	
+        });
     }
-    
 }
