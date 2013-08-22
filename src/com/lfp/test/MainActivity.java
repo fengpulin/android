@@ -35,7 +35,8 @@ public class MainActivity extends Activity {
         button_login.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v){
-        		textView_showLogin.setText("hello"+editText_getName.getText());
+        		textView_showLogin.setText("hello "+editText_getName.getText());
+        		editText_getName.setText(null);
         	}
         	
         });
@@ -44,7 +45,11 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				Intent showResult_intent = new Intent(MainActivity.this,ResultActivity.class);
+				Intent showResult_intent = new Intent();
+				Bundle myBundle = new Bundle();
+				myBundle.putString("name", editText_getName.getText().toString());
+				showResult_intent.putExtras(myBundle);
+				showResult_intent.setClass(MainActivity.this, ResultActivity.class);
 				startActivity(showResult_intent);
 				
 			}

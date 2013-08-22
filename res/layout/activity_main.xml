@@ -25,22 +25,22 @@
         android:ems="10"
         android:inputType="text" />
 
-    <TextView
-        android:id="@+id/textView_showLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText_getName"
-        android:layout_alignLeft="@+id/editText_getName"
-        android:layout_marginBottom="42dp"
-        android:text="@string/hello"
-        android:textSize="48dp" />
-
     <Button
         android:id="@+id/button_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="result" />
+        android:text="@string/result" />
+
+    <TextView
+        android:id="@+id/textView_showLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_getName"
+        android:layout_below="@+id/button_result"
+        android:layout_marginTop="27dp"
+        android:text="@string/hello"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

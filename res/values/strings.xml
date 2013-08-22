@@ -6,5 +6,6 @@
     <string name="login">login</string>
     <string name="hello">hello</string>
     <string name="resultActivity">result</string>
+    <string name="result">result</string>
 
 </resources>

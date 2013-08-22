@@ -13,7 +13,8 @@ public class ResultActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_result);
 		textView_result = (TextView)findViewById(R.id.textView_result);
-		textView_result.setText(R.string.hello);
+		Bundle myBundle = this.getIntent().getExtras();
+		textView_result.setText("hello "+myBundle.getString("name"));
 		
 	}
 

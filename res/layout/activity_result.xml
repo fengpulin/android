@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="97dp"
-        android:text="Result"
+        android:text="@string/hello"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
