@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
         	
         });
         
-        button_result.setOnClickListener(new OnClickListener(){
+        /*button_result.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
@@ -54,6 +54,22 @@ public class MainActivity extends Activity {
 				
 			}
         	
-        });
+        });*/
+        button_result.setOnClickListener(new MyButtonListener());
     }
+
+	class MyButtonListener implements OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			Intent showResult_intent = new Intent();
+			Bundle myBundle = new Bundle();
+			myBundle.putString("name", editText_getName.getText().toString());
+			showResult_intent.putExtras(myBundle);
+			showResult_intent.setClass(MainActivity.this, ResultActivity.class);
+			startActivity(showResult_intent);
+		}
+
+	}
 }
