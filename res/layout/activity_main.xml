@@ -9,38 +9,9 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/button_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="116dp"
-        android:text="@string/login" />
-
-    <EditText
-        android:id="@+id/editText_getName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:ems="10"
-        android:inputType="text" />
-
-    <Button
         android:id="@+id/button_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/result" />
-
-    <TextView
-        android:id="@+id/textView_showLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText_getName"
-        android:layout_below="@+id/button_result"
-        android:layout_marginTop="27dp"
-        android:text="@string/hello"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="@string/calculator" />
 
 </RelativeLayout>
