@@ -26,6 +26,10 @@
             android:name="com.lfp.calculator.CalculatorActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="com.lfp.MediaPlayer.MediaPlayerActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>

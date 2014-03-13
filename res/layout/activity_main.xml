@@ -14,4 +14,13 @@
         android:layout_height="wrap_content"
         android:text="@string/calculator" />
 
+    <Button
+        android:id="@+id/button_mediaPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_calculator"
+        android:layout_alignBottom="@+id/button_calculator"
+        android:layout_toRightOf="@+id/button_calculator"
+        android:text="@string/mediaPlayer" />
+
 </RelativeLayout>
