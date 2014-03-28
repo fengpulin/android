@@ -1,6 +1,7 @@
 package com.lfp.test;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ public class MainActivity extends Activity {
 
 	private Button button_calculator = null;
 	private Button button_mediaPlayer = null;
+	private Button button_cagwymhphone = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,9 @@ public class MainActivity extends Activity {
 		button_calculator.setOnClickListener(new ButtonCalculatorListener());
 		button_mediaPlayer = (Button) findViewById(R.id.button_mediaPlayer);
 		button_mediaPlayer.setOnClickListener(new ButtonMediaPlayerListener());
+		button_cagwymhphone = (Button) findViewById(R.id.button_cagwymhphone);
+		button_cagwymhphone
+				.setOnClickListener(new ButtonCagwymhphoneListener());
 	}
 
 	class ButtonCalculatorListener implements OnClickListener {
@@ -37,8 +42,8 @@ public class MainActivity extends Activity {
 		}
 
 	}
-	
-	class ButtonMediaPlayerListener implements OnClickListener{
+
+	class ButtonMediaPlayerListener implements OnClickListener {
 
 		@Override
 		public void onClick(View arg0) {
@@ -47,6 +52,20 @@ public class MainActivity extends Activity {
 			intent.setClass(MainActivity.this, MediaPlayerActivity.class);
 			MainActivity.this.startActivity(intent);
 		}
-		
+
+	}
+
+	class ButtonCagwymhphoneListener implements OnClickListener {
+
+		@Override
+		public void onClick(View arg0) {
+			// 调用公务员门户应用
+			String pkg = "com.fiberhome.exmobi.engineer.client.cagwymhphone";
+			String cls = "com.fiberhome.gaea.client.html.activity.WelcomActivity";
+			ComponentName componet = new ComponentName(pkg, cls);
+			Intent i = new Intent();
+			i.setComponent(componet);
+			startActivity(i);
+		}
 	}
 }

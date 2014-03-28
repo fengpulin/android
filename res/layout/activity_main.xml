@@ -23,4 +23,13 @@
         android:layout_toRightOf="@+id/button_calculator"
         android:text="@string/mediaPlayer" />
 
+    <Button
+        android:id="@+id/button_cagwymhphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_calculator"
+        android:layout_marginTop="38dp"
+        android:layout_toLeftOf="@+id/button_mediaPlayer"
+        android:text="@string/cagwymhphone" />
+
 </RelativeLayout>
