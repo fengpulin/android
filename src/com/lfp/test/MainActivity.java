@@ -10,12 +10,14 @@ import android.widget.Button;
 
 import com.lfp.MediaPlayer.MediaPlayerActivity;
 import com.lfp.calculator.CalculatorActivity;
+import com.lfp.game.RabbitActivity;
 
 public class MainActivity extends Activity {
 
 	private Button button_calculator = null;
 	private Button button_mediaPlayer = null;
 	private Button button_cagwymhphone = null;
+	private Button button_rabbit = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class MainActivity extends Activity {
 		button_cagwymhphone = (Button) findViewById(R.id.button_cagwymhphone);
 		button_cagwymhphone
 				.setOnClickListener(new ButtonCagwymhphoneListener());
+		button_rabbit = (Button) findViewById(R.id.button_rabbit);
+		button_rabbit.setOnClickListener(new ButtonRabbitListener());
 	}
 
 	class ButtonCalculatorListener implements OnClickListener {
@@ -67,5 +71,17 @@ public class MainActivity extends Activity {
 			i.setComponent(componet);
 			startActivity(i);
 		}
+	}
+	
+	class ButtonRabbitListener implements OnClickListener {
+
+		@Override
+		public void onClick(View arg0) {
+			
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, RabbitActivity.class);
+			MainActivity.this.startActivity(intent);
+		}
+
 	}
 }

@@ -32,4 +32,13 @@
         android:layout_toLeftOf="@+id/button_mediaPlayer"
         android:text="@string/cagwymhphone" />
 
+    <Button
+        android:id="@+id/button_rabbit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_mediaPlayer"
+        android:layout_alignBottom="@+id/button_mediaPlayer"
+        android:layout_toRightOf="@+id/button_mediaPlayer"
+        android:text="@string/game" />
+
 </RelativeLayout>
