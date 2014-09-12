@@ -27,11 +27,15 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.lfp.MediaPlayer.MediaPlayerActivity"
+            android:name="com.lfp.mediaPlayer.MediaPlayerActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
             android:name="com.lfp.game.RabbitActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.lfp.layout.LayoutActivity"
             android:label="@string/app_name" >
         </activity>
     </application>

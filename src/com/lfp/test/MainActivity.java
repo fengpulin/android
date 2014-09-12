@@ -8,9 +8,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import com.lfp.MediaPlayer.MediaPlayerActivity;
 import com.lfp.calculator.CalculatorActivity;
 import com.lfp.game.RabbitActivity;
+import com.lfp.layout.LayoutActivity;
+import com.lfp.mediaPlayer.MediaPlayerActivity;
 
 public class MainActivity extends Activity {
 
@@ -18,6 +19,7 @@ public class MainActivity extends Activity {
 	private Button button_mediaPlayer = null;
 	private Button button_cagwymhphone = null;
 	private Button button_rabbit = null;
+	private Button button_layout = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,8 @@ public class MainActivity extends Activity {
 				.setOnClickListener(new ButtonCagwymhphoneListener());
 		button_rabbit = (Button) findViewById(R.id.button_rabbit);
 		button_rabbit.setOnClickListener(new ButtonRabbitListener());
+		button_layout = (Button)findViewById(R.id.button_layout);
+		button_layout.setOnClickListener(new ButtonLayoutListener());
 	}
 
 	class ButtonCalculatorListener implements OnClickListener {
@@ -80,6 +84,18 @@ public class MainActivity extends Activity {
 			
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, RabbitActivity.class);
+			MainActivity.this.startActivity(intent);
+		}
+
+	}
+	
+	class ButtonLayoutListener implements OnClickListener {
+
+		@Override
+		public void onClick(View arg0) {
+			
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, LayoutActivity.class);
 			MainActivity.this.startActivity(intent);
 		}
 

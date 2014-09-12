@@ -1,4 +1,4 @@
-package com.lfp.MediaPlayer;
+package com.lfp.mediaPlayer;
 
 import com.lfp.test.R;
 
